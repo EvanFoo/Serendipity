@@ -17,7 +17,6 @@ public:
     Module(const Module& orig);
     void displayTable(int rows, int columns, std::string elements[]);
     virtual ~Module();
-<<<<<<< HEAD
 
     struct Date{
         int day;
@@ -25,9 +24,7 @@ public:
         int year;
     };
     
-=======
-private:
->>>>>>> FETCH_HEAD
+protected:
     struct Book{
         int ISBN;
         std::string title;

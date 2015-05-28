@@ -15,9 +15,6 @@ using namespace std;
 
 int main(int argc, char** argv) {
 
-    time_t t = time(0);
-    
-    printf("%s", ctime(&t));
 
     return 0;
 }
