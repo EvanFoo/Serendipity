@@ -14,7 +14,7 @@ using namespace std;
 int main(int argc, char** argv) {
 
 //command line arguements, so cool
-int main(int argc, char** argv) {
+
 // returns 0, so good
 
     return 0;
