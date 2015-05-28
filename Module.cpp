@@ -7,6 +7,7 @@
 
 #include "Module.h"
 #include <iostream>
+#include <iomanip>
 
 Module::Module() {
 }
@@ -20,7 +21,7 @@ void Module::displayTable(int rows, int columns, std::string elements[]){
         std::cout << std::endl;
         
         for(int j = 0; j < columns; j++){
-            std::cout "--------------------";
+            std::cout << "--------------------";
         }
         
         std::cout << std::endl;
