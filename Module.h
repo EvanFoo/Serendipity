@@ -16,7 +16,7 @@ public:
     Module(const Module& orig);
     void displayTable(int rows, int columns, std::string elements[]);
     virtual ~Module();
-private:
+
     struct Date{
         int day;
         int month;
