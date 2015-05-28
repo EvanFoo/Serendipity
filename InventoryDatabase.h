@@ -8,7 +8,9 @@
 #ifndef INVENTORYDATABASE_H
 #define	INVENTORYDATABASE_H
 
-class InventoryDatabase {
+#include "Module.h"
+
+class InventoryDatabase: public Module {
 public:
     InventoryDatabase();
     InventoryDatabase(const InventoryDatabase& orig);
