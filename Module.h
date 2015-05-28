@@ -9,6 +9,7 @@
 #define	MODULE_H
 
 #include <string>
+#include <ctime>
 
 class Module {
 public:
@@ -17,18 +18,12 @@ public:
     void displayTable(int rows, int columns, std::string elements[]);
     virtual ~Module();
 private:
-    struct Date{
-        int day;
-        int month;
-        int year;
-    };
-    
     struct Book{
         int ISBN;
         std::string title;
         std::string author;
         std::string pulisher;
-        Date dateAdded;
+        time_t dateAdded;
         int quantity;
         int wholesale;
         int retail;     
