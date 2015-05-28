@@ -14,7 +14,7 @@ public:
     Cashier(const Cashier& orig);
     virtual ~Cashier();
 private:
-
+	
 };
 
 #endif	/* CASHIER_H */
