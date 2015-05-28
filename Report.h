@@ -8,7 +8,9 @@
 #ifndef REPORT_H
 #define	REPORT_H
 
-class Report {
+#include "Module.h"
+
+class Report: public Module {
 public:
     Report();
     Report(const Report& orig);

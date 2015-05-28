@@ -8,7 +8,9 @@
 #ifndef CASHIER_H
 #define	CASHIER_H
 
-class Cashier {
+#include "Module.h"
+
+class Cashier: public Module {
 public:
     Cashier();
     Cashier(const Cashier& orig);
