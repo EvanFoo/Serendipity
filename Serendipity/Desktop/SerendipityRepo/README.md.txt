@@ -1,1 +1,0 @@
-Final project for 22B written in C++.
