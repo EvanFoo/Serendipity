@@ -9,6 +9,7 @@
 #define	MODULE_H
 
 #include <string>
+#include <ctime>
 
 class Module {
 public:
@@ -16,6 +17,7 @@ public:
     Module(const Module& orig);
     void displayTable(int rows, int columns, std::string elements[]);
     virtual ~Module();
+<<<<<<< HEAD
 
     struct Date{
         int day;
@@ -23,12 +25,15 @@ public:
         int year;
     };
     
+=======
+private:
+>>>>>>> FETCH_HEAD
     struct Book{
         int ISBN;
         std::string title;
         std::string author;
         std::string pulisher;
-        Date dateAdded;
+        time_t dateAdded;
         int quantity;
         int wholesale;
         int retail;     

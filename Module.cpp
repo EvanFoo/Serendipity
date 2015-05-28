@@ -21,6 +21,10 @@ void Module::displayTable(int rows, int columns, std::string elements[]){
         std::cout << std::endl;
         
         for(int j = 0; j < columns; j++){
+<<<<<<< HEAD
+=======
+            std::cout << "---------------------";
+>>>>>>> FETCH_HEAD
 
         }
         
