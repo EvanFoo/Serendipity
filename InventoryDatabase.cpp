@@ -7,6 +7,7 @@
 
 #include "InventoryDatabase.h"
 #include <ctime>
+#include <iostream>
 
 InventoryDatabase::InventoryDatabase() {
 }
@@ -14,27 +15,21 @@ InventoryDatabase::InventoryDatabase() {
 InventoryDatabase::InventoryDatabase(const InventoryDatabase& orig) {
 }
 
-void InventoryDatabase::addBook(InventoryBook books[], int inputISBN, std::string inputTitle, std::string inputAuthor, std::string inputPublisher, int inputQuantity, double inputWholesaleCost, double inputRetailPrice ){
+void InventoryDatabase::addBook(int inputISBN, std::string inputTitle, std::string inputAuthor, std::string inputPublisher, int inputQuantity, double inputWholesaleCost, double inputRetailPrice ){
     
     //important: I am passing in the current system time to the constructor rather than a user entered time
     InventoryBook temp(inputISBN, inputTitle, inputAuthor, inputPublisher, time(0), inputQuantity, inputWholesaleCost, inputRetailPrice );
     
-    //increment the number of unique books, and write the new book in the last position
-    ++numberOfUniqueBooks;
+    ++numBooks;
     
-    for(int i = 0; i < numberOfUniqueBooks; i++){
-        if(books[i].getISBN() < inputISBN && books[i + 1].getISBN() > inputISBN){
-            
-        }
-    }
+    books[numBooks] = temp;
+};
+
+void InventoryDatabase::deleteBook(int inputISBN){
     
 };
 
-void InventoryDatabase::deleteBook(InventoryBook books[], int inputISBN){
-    
-};
-
-void InventoryDatabase::changeBook(InventoryBook books[], int inputISBN){
+void InventoryDatabase::changeBook(int inputISBN){
     
 };
 

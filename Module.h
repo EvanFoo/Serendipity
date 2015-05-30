@@ -14,7 +14,7 @@
 #include "InventoryBook.h"
 
 class Module {
-private:
+protected:
 	int numBooks;
 	InventoryBook* books;
 	ifstream in;
