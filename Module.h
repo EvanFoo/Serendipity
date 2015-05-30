@@ -10,13 +10,21 @@
 
 #include <string>
 #include <ctime>
+#include<fstream>
+#include "InventoryBook.h"
 
 class Module {
+private:
+	int numBooks;
+	InventoryBook* books;
+	ifstream in;
+	ofstream out;
 public:
     Module();
     Module(const Module& orig);
     void displayTable(int rows, int columns, std::string elements[]);
     virtual ~Module();
+
 };
 
 #endif	/* MODULE_H */

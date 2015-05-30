@@ -24,19 +24,20 @@ public:
     void setAuthor(string input){author = input;};
     string getPublisher(){return publisher;};
     void setPublisher(string input){publisher = input;};
-    time_t getDateAdded(){return dateAdded;};
-    void setDateAdded(time_t input){dateAdded = input;};
+    int getDateAdded(){return dateAdded;};
+    void setDateAdded(int input){dateAdded = input;};
     double getWholesale(){return wholesale;};
     void setWholesale(double input){wholesale = input;};
     double getRetail(){return retail;};
     void setRetail(double input){retail = input;};
+	
     virtual ~Book();
 protected:
     int ISBN;
     string title;
     string author;
     string publisher;
-    time_t dateAdded;       //using time_t makes it easy to store a date as numerical value
+    int dateAdded;       //using time_t makes it easy to store a date as numerical value
     double wholesale;
     double retail;
 };
