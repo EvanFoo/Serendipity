@@ -7,9 +7,18 @@
 
 #include "Module.h"
 #include <iostream>
+#include <fstream>
 #include <iomanip>
 
 Module::Module() {
+	InventoryBook book;
+	in.open("C:\\Users\\Fox\\Documents\\GitHub\\Serendipity\\file.txt");
+	in >> numBooks;
+	books = new InventoryBook[numBooks];
+	for(int i = 0; i < numBooks; i++){
+		in >> books[i]; 
+		cout << books[i];
+	}
 }
 
 Module::Module(const Module& orig) {
@@ -44,5 +53,14 @@ void Module::displayTable(int rows, int columns, std::string elements[]){
 }
 
 Module::~Module() {
+	out.open("file.txt");
+	out << numBooks;
+	for(int i = 0; i < numBooks; i++){
+		out <<  books[i]; 
+	}
+	in.close();
+	out.close();
+	delete [] books;
+
 }
 

@@ -10,8 +10,15 @@
 
 #include <string>
 #include <ctime>
+#include<fstream>
+#include "InventoryBook.h"
 
 class Module {
+private:
+	int numBooks;
+	InventoryBook* books;
+	ifstream in;
+	ofstream out;
 public:
     Module();
     Module(const Module& orig);
@@ -25,16 +32,7 @@ public:
     };
     
 protected:
-    struct Book{
-        int ISBN;
-        std::string title;
-        std::string author;
-        std::string pulisher;
-        time_t dateAdded;
-        int quantity;
-        int wholesale;
-        int retail;     
-    };
+    
 };
 
 #endif	/* MODULE_H */

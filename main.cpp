@@ -9,11 +9,14 @@
 #include <ctime>
 #include <iostream>
 #include <stdio.h>
+#include "InventoryBook.h"
 #include "Module.h"
 
 using namespace std;
 
 int main(int argc, char** argv) {
+	Module mod;
+	Module mod2;
 
 
     return 0;
