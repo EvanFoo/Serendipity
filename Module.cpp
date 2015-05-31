@@ -15,11 +15,13 @@ Module::Module() {
 	//in.open("C:\\Users\\Fox\\Documents\\GitHub\\Serendipity\\file.txt");
         in.open("file.txt");
 	in >> numBooks;
-	books = new InventoryBook[numBooks * 2];
+	books = new InventoryBook[numBooks];
 	for(int i = 0; i < numBooks; i++){
 		in >> books[i]; 
 		cout << books[i];
 	}
+        
+        in.close();
 }
 
 Module::Module(const Module& orig) {
@@ -59,8 +61,9 @@ Module::~Module() {
 	for(int i = 0; i < numBooks; i++){
 		out <<  books[i]; 
 	}
-	in.close();
+        
 	out.close();
+        
 	delete [] books;
 
 }

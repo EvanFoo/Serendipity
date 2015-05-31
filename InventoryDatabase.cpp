@@ -15,14 +15,18 @@ InventoryDatabase::InventoryDatabase() {
 InventoryDatabase::InventoryDatabase(const InventoryDatabase& orig) {
 }
 
-void InventoryDatabase::addBook(int inputISBN, std::string inputTitle, std::string inputAuthor, std::string inputPublisher, int inputQuantity, double inputWholesaleCost, double inputRetailPrice ){
+void InventoryDatabase::addBook(int inputISBN, std::string inputTitle, std::string inputAuthor, std::string inputPublisher, int inputQuantity, double inputWholesaleCost, double inputRetailPrice ){    
+    numBooks++;
     
-    //important: I am passing in the current system time to the constructor rather than a user entered time
-    InventoryBook temp(inputISBN, inputTitle, inputAuthor, inputPublisher, time(0), inputQuantity, inputWholesaleCost, inputRetailPrice );
+    books[numBooks-1].setISBN(inputISBN);
+    books[numBooks-1].setTitle(inputTitle);
+    books[numBooks-1].setAuthor(inputAuthor);
+    books[numBooks-1].setPublisher(inputPublisher);
+    books[numBooks-1].setQuantity(inputQuantity);
+    books[numBooks-1].setWholesale(inputWholesaleCost);
+    books[numBooks-1].setRetail(inputRetailPrice);
+    books[numBooks-1].setDateAdded(time(0)); 
     
-    ++numBooks;
-    
-    books[numBooks] = temp;
 };
 
 void InventoryDatabase::deleteBook(int inputISBN){
