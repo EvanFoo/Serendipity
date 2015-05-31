@@ -19,7 +19,6 @@ Module::Module() {
 		in >> books[i]; 
 		cout << books[i];
 	}
-	books[0].setAuthor("the author");
 }
 
 Module::Module(const Module& orig) {
