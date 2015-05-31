@@ -56,7 +56,8 @@ void Module::displayTable(int rows, int columns, std::string elements[]){
 }
 
 Module::~Module() {
-	out.open("file.txt");
+	out.open("C:\\Users\\Fox\\Documents\\GitHub\\Serendipity\\file.txt");
+	cout << "destructor";
 	out << numBooks;
 	for(int i = 0; i < numBooks; i++){
 		out <<  books[i]; 
