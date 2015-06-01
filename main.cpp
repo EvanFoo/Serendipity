@@ -16,18 +16,8 @@
 using namespace std;
 
 int main(int argc, char** argv) {
-<<<<<<< HEAD
-    {
-        Module mod;
-    }
-    cout << "MOD OUT OF SCOPE";
     
-    
-=======
-	Module mod;
 
-
->>>>>>> eb937781a06c3ae51ce16e310b137ad990a20bd4
     return 0;
 }
 

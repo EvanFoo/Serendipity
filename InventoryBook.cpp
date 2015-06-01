@@ -18,8 +18,33 @@ InventoryBook::InventoryBook(int ISBN, string title, string author,string publis
 	quantity = inquantity;
 }
 
+InventoryBook::InventoryBook() {
+	setISBN(0);
+	setDateAdded(0);
+	setWholesale(0);
+	setRetail(0);
+	quantity = 0;
+}
+
 InventoryBook::InventoryBook(const InventoryBook& orig) {
 }
+
+// InventoryBook & InventoryBook::operator=(InventoryBook& other){
+//        InventoryBook temp;
+//        temp.setISBN(other.getISBN());
+//        temp.setTitle(other.getTitle());
+//        temp.setAuthor(other.getAuthor());
+//        temp.setPublisher(other.getPublisher());
+//        temp.setDateAdded(other.getDateAdded());
+//        temp.setWholesale(other.getWholesale());
+//        temp.setRetail(other.getRetail());
+//        temp.setQuantity(other.getQuantity());
+//        
+//        InventoryBook & tempRef = temp;
+//        
+//        cout << "= operator" << endl;
+//        return tempRef;
+// }
 
 InventoryBook::~InventoryBook() {
 }
