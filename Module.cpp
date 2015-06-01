@@ -10,6 +10,12 @@
 #include <fstream>
 #include <iomanip>
 
+//notes on how the Module class works:
+//in the constructor, all of the books are loaded into the array named "books"
+//in the destructor, all of the books are written from the "books" array back into the file
+//to best use this functionality, use the "books" array to obtain information about books in the 
+//database, and make changes to the database, the changes will be automatically written back to the file
+
 Module::Module() {
 	InventoryBook book;
         

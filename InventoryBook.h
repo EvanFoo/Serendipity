@@ -32,7 +32,6 @@ public:
         this->setWholesale(other.wholesale);
         this->setRetail(other.retail);
         this->setQuantity(other.quantity);
-        
         return *this;
     }
     
@@ -49,7 +48,6 @@ public:
         getline(input, b.author, '\n');
         getline(input, b.publisher, '\n');
         input >> b.dateAdded >> b.wholesale >> b.retail >> b.quantity;
-//      input >> b.ISBN>> b.title>>b.author>>b.publisher>>b.dateAdded>>b.wholesale>>b.retail>>b.quantity;
         return input;            
     }
     
