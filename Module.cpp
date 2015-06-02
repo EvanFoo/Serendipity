@@ -24,10 +24,10 @@ Module::Module() {
         in.open("file.txt");
         
 	in >> numBooks;
-	books = new InventoryBook[numBooks];
+	inventory = new InventoryBook[numBooks];
 	for(int i = 0; i < numBooks; i++){
-		in >> books[i]; 
-		cout << books[i];
+		in >> inventory[i]; 
+		cout << inventory[i];
 	}
         
         in.close();
@@ -71,12 +71,12 @@ Module::~Module() {
     cout << "destructor";
     out << numBooks;
     for(int i = 0; i < numBooks; i++){
-	out <<  books[i]; 
+	out <<  inventory[i]; 
     }
         
     out.close();
         
-    delete [] books;
+    delete [] inventory;
 
 }
 
