@@ -15,9 +15,11 @@ class InventoryDatabase: public Module {
 public:
     InventoryDatabase();
     InventoryDatabase(const InventoryDatabase& orig);
-    void addBook( int inputISBN, std::string inputTitle, std::string inputAuthor, std::string inputPublisher, int inputQuantity, double inputWholesaleCost, double inputRetailPrice);
-    void deleteBook(int inputISBN);
-    void changeBook(int inputISBN);
+	void lookUp();
+    void addBook();
+	int find(int);
+    void deleteBook();
+    void changeBook();
     virtual ~InventoryDatabase();
 private:
     

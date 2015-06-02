@@ -12,8 +12,8 @@
 
 Module::Module() {
 	InventoryBook book;
-	//in.open("C:\\Users\\Fox\\Documents\\GitHub\\Serendipity\\file.txt");
-        in.open("file.txt");
+	in.open("C:\\Users\\Fox\\Documents\\GitHub\\Serendipity\\file.txt");
+    //    in.open("file.txt");
 	in >> numBooks;
 	books = new InventoryBook[numBooks];
 	for(int i = 0; i < numBooks; i++){
