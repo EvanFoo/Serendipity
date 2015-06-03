@@ -16,14 +16,13 @@
 using namespace std;
 
 int main(int argc, char** argv) {
-    {
-        Module mod;
-    }
-    cout << "MOD OUT OF SCOPE";
+    InventoryDatabase data;
+
     
     
 
 	
+
 
 
     return 0;

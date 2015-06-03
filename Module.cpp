@@ -10,15 +10,26 @@
 #include <fstream>
 #include <iomanip>
 
+//notes on how the Module class works:
+//in the constructor, all of the books are loaded into the array named "books"
+//in the destructor, all of the books are written from the "books" array back into the file
+//to best use this functionality, use the "books" array to obtain information about books in the 
+//database, and make changes to the database, the changes will be automatically written back to the file
+
 Module::Module() {
 	InventoryBook book;
+
 	in.open("C:\\Users\\Fox\\Documents\\GitHub\\Serendipity\\file.txt");
     //    in.open("file.txt");
+
+        
+       
+
 	in >> numBooks;
 	books = new InventoryBook[numBooks];
 	for(int i = 0; i < numBooks; i++){
 		in >> books[i]; 
-		cout << books[i];
+		//cout << books[i];
 	}
         
         in.close();
@@ -56,16 +67,17 @@ void Module::displayTable(int rows, int columns, std::string elements[]){
 }
 
 Module::~Module() {
-	out.open("C:\\Users\\Fox\\Documents\\GitHub\\Serendipity\\file.txt");
-	cout << "destructor";
-	out << numBooks;
-	for(int i = 0; i < numBooks; i++){
-		out <<  books[i]; 
-	}
         
-	out.close();
+    out.open("C:\\Users\\Fox\\Documents\\GitHub\\Serendipity\\file.txt");
+    cout << "destructor";
+    out << numBooks;
+    for(int i = 0; i < numBooks; i++){
+	out <<  books[i]; 
+    }
         
-	delete [] books;
+    out.close();
+        
+    delete [] books;
 
 }
 
