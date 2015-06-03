@@ -1,37 +1,5 @@
-11
-0
-
-
-
-0
-0
-0
-0
-0
-
-
-
-0
-0
-0
-0
-0
-
-
-
-0
-0
-0
-0
-2147483647
-
-
-
-0
-0
-0
-0
-136369
+9
+369
 Harry Potter and the Prisoner of Azkaban
 J.K. Rowling
 Scholastic
@@ -39,7 +7,7 @@ Scholastic
 15
 25
 1200
-4432354
+4
 Harry Potter and the Deathly Hallows
 J.K. Rowling
 Scholastic
@@ -47,7 +15,7 @@ Scholastic
 15
 25
 1700
-5314151
+1
 Harry Potter and the Philosopher's Stone
 J.K. Rowling
 Scholastic
@@ -55,7 +23,15 @@ Scholastic
 15
 25
 1000
-41234234
+4
+The Hobbit
+J.K. Rowling
+Scholastic
+1433100430
+15
+25
+1700
+34
 Harry Potter and the Goblet of Fire
 J.K. Rowling
 Scholastic
@@ -63,15 +39,15 @@ Scholastic
 15
 25
 2000
-74753269
-Harry Potter and the Philosopher's Stone
+73
+Harry Potter and the Chamber of Secrets
 J.K. Rowling
 Scholastic
 1433100430
 15
 25
-1000
-87568767
+1500
+67
 Harry Potter and the Half Blood Prince
 J.K. Rowling
 Scholastic
@@ -79,7 +55,7 @@ Scholastic
 15
 25
 1700
-87987656
+56
 Harry Potter and the Order of the Phoenix
 J.K. Rowling
 Scholastic
@@ -87,3 +63,11 @@ Scholastic
 15
 25
 2000
+53269
+Harry Potter and the Philosopher's Stone
+J.K. Rowling
+Scholastic
+1433100430
+15
+25
+1000

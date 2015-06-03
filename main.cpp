@@ -16,6 +16,7 @@
 using namespace std;
 
 int main(int argc, char** argv) {
+
     InventoryDatabase data;
 
     

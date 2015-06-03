@@ -16,7 +16,7 @@
 class Module {
 protected:
 	int numBooks;
-	InventoryBook* books;
+	InventoryBook* inventory;
 	ifstream in;
 	ofstream out;
 public:

@@ -20,16 +20,13 @@ Module::Module() {
 	InventoryBook book;
 
 	in.open("C:\\Users\\Fox\\Documents\\GitHub\\Serendipity\\file.txt");
-    //    in.open("file.txt");
-
+     
         
-       
 
 	in >> numBooks;
-	books = new InventoryBook[numBooks];
+	inventory = new InventoryBook[numBooks*2];
 	for(int i = 0; i < numBooks; i++){
-		in >> books[i]; 
-		//cout << books[i];
+		in >> inventory[i]; 
 	}
         
         in.close();
@@ -67,17 +64,17 @@ void Module::displayTable(int rows, int columns, std::string elements[]){
 }
 
 Module::~Module() {
-        
+       
     out.open("C:\\Users\\Fox\\Documents\\GitHub\\Serendipity\\file.txt");
     cout << "destructor";
     out << numBooks;
     for(int i = 0; i < numBooks; i++){
-	out <<  books[i]; 
+		out <<  inventory[i]; 
     }
         
     out.close();
         
-    delete [] books;
+    delete [] inventory;
 
 }
 

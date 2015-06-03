@@ -37,39 +37,56 @@ InventoryDatabase::InventoryDatabase(const InventoryDatabase& orig) {
 }
 
 int InventoryDatabase::find(int theISBN){
-	int first = 0, last = numBooks - 1, middle, position = -1;
+	/*int first = 0, last = numBooks - 1, middle, position = -1;
 	bool found = false; 
 	int startScan, minIndex;
 	InventoryBook minValue;
 	//selection sort
 		for (startScan = 0; startScan < (numBooks-1); startScan++){
 			minIndex = startScan;
-			minValue = books[startScan];
+			minValue = inventory[startScan];
 			for(int index = startScan + 1; index < numBooks; index++){
-				if (books[index].getISBN() < minValue.getISBN()){
-					minValue = books[index];
+				if (inventory[index].getISBN() < minValue.getISBN()){
+					minValue = inventory[index];
 					minIndex = index;
 				}
 			}
-			books[minIndex] = books[startScan];
-			books[startScan] = minValue;
+			inventory[minIndex] = inventory[startScan];
+			inventory[startScan] = minValue;
 		}
 	//binary search
 	while (!found && first <= last)
 	{
 		middle = (first + last) / 2; 
-		if (books[middle].getISBN() == theISBN) 
+		if (inventory[middle].getISBN() == theISBN) 
 		{
 			found = true;
 			position = middle;
 		}
-		else if (books[middle].getISBN() > theISBN) 
+		else if (inventory[middle].getISBN() > theISBN) 
 			last = middle - 1;
 		else
 			first = middle + 1; 
 	}
-	return position;
-	
+	if(!found){
+		cout << "Book not found" << endl;
+		return 0;
+	}
+	return position;*/
+	//Linear search implementation
+	int i = 0;
+	bool found = false;
+	int location = 0;
+	while((i < numBooks) || !found){
+		if(inventory[i].getISBN() == theISBN){
+			found = true;
+			location = i;
+		}
+	}
+	if(!found){
+		cout << "Book not found";
+	}
+	return location;
 } 
 
 
@@ -79,12 +96,11 @@ void InventoryDatabase::lookUp(){
 	cout << "Enter the ISBN of the book you want to lookup";
 	cin >> theISBN;
 	location = find(theISBN);
-	cout << books[location];
+	cout << inventory[location];
 
 }
 
 void InventoryDatabase::addBook(){    
-    numBooks++;
     int theISBN;
 	string title, author, publisher;
 	int date, quantity;
@@ -93,27 +109,27 @@ void InventoryDatabase::addBook(){
 	cin >> theISBN;
 	cin.ignore();
 	cout << "Enter title:";
-	cin.ignore();
 	getline(cin, title);
 	cout << "Enter author:";
 	getline(cin, author);
 	cout << "Enter Publisher:";
-	getline(cin,title);
+	getline(cin,publisher);
 	cout << "Enter quantity:";
 	cin >> quantity;
 	cout << "Enter wholesale cost:";
 	cin >> wholesale;
-	cout << "Enter retail price";
+	cout << "Enter retail price:";
 	cin >> retail;
 	cout << "Adding the book"<<endl;
-    books[1].setISBN(theISBN);
-    books[1].setTitle(title);
-    books[1].setAuthor(author);
-    books[1].setPublisher(publisher);
-    books[1].setQuantity(quantity);
-    books[1].setWholesale(wholesale);
-    books[1].setRetail(retail);
-    books[1].setDateAdded(time(0)); 
+    inventory[numBooks].setISBN(theISBN);
+    inventory[numBooks].setTitle(title);
+    inventory[numBooks].setAuthor(author);
+    inventory[numBooks].setPublisher(publisher);
+    inventory[numBooks].setQuantity(quantity);
+    inventory[numBooks].setWholesale(wholesale);
+    inventory[numBooks].setRetail(retail);
+    inventory[numBooks].setDateAdded(time(0)); 
+	numBooks++;
     
 };
 
@@ -125,14 +141,14 @@ void InventoryDatabase::deleteBook(){
 	index = find(theISBN);
 	numBooks--;
 	//set all values to nothing and boot to the end of the array
-	books[index].setISBN(2147483647);
-    books[index].setTitle("");
-    books[index].setAuthor("");
-    books[index].setPublisher("");
-    books[index].setQuantity(0);
-    books[index].setWholesale(0);
-    books[index].setRetail(0);
-    books[index].setDateAdded(0); 
+	inventory[index].setISBN(2147483647);
+    inventory[index].setTitle("");
+    inventory[index].setAuthor("");
+    inventory[index].setPublisher("");
+    inventory[index].setQuantity(0);
+    inventory[index].setWholesale(0);
+    inventory[index].setRetail(0);
+    inventory[index].setDateAdded(0); 
 	
     
 };
@@ -145,29 +161,29 @@ void InventoryDatabase::changeBook(){
 	double wholesale, retail;
 	cout << "Enter the ISBN of the book you would like to change";
 	cin >> theISBN;
-	index = find(theISBN);
-
 	cin.ignore();
-	cout << "Enter new title:";
-	getline(cin, title);
-	cout << "Enter new author:";
-	getline(cin, author);
-	cout << "Enter new Publisher:";
-	getline(cin,title);
-	cout << "Enter new quantity:";
-	cin >> quantity;
-	cout << "Enter new wholesale cost:";
-	cin >> wholesale;
-	cout << "Enter new retail price";
-	cin >> retail;
-    books[index].setISBN(theISBN);
-    books[index].setTitle(title);
-    books[index].setAuthor(author);
-    books[index].setPublisher(publisher);
-    books[index].setQuantity(quantity);
-    books[index].setWholesale(wholesale);
-    books[index].setRetail(retail);
-    books[index].setDateAdded(time(0)); 
+	if(index = find(theISBN)){
+		cout << "Enter new title:";
+		getline(cin, title);
+		cout << "Enter new author:";
+		getline(cin, author);
+		cout << "Enter new Publisher:";
+		getline(cin,publisher);
+		cout << "Enter new quantity:";
+		cin >> quantity;
+		cout << "Enter new wholesale cost:";
+		cin >> wholesale;
+		cout << "Enter new retail price";
+		cin >> retail;
+	    inventory[index].setISBN(theISBN);
+		inventory[index].setTitle(title);
+		inventory[index].setAuthor(author);
+		inventory[index].setPublisher(publisher);
+	    inventory[index].setQuantity(quantity);
+		inventory[index].setWholesale(wholesale);
+		inventory[index].setRetail(retail);
+		inventory[index].setDateAdded(time(0)); 
+	}
 };
 
 InventoryDatabase::~InventoryDatabase() {
