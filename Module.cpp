@@ -18,16 +18,17 @@
 
 Module::Module() {
 	InventoryBook book;
+
+	in.open("C:\\Users\\Fox\\Documents\\GitHub\\Serendipity\\file.txt");
+     
         
-        //choose the correct file path for your computer (important: also modify the path in the destructor)
-	//in.open("C:\\Users\\Fox\\Documents\\GitHub\\Serendipity\\file.txt");
-        in.open("file.txt");
-        
+
 	in >> numBooks;
         
         //the size of this array in numBooks * 2, this means that there will always be enough space to add more 
         //books to the array as long as the number of unique books is not more than doubled
 	inventory = new InventoryBook[numBooks * 2];
+
 	for(int i = 0; i < numBooks; i++){
 		in >> inventory[i]; 
 	}
@@ -69,12 +70,13 @@ void Module::displayTable(int rows, int columns, std::string elements[]){
 Module::~Module() {
         
     //again, enter the correct path for your environment
-    out.open("file.txt");
-    //out.open("C:\\Users\\Fox\\Documents\\GitHub\\Serendipity\\file.txt");
+    //out.open("file.txt");
+    out.open("C:\\Users\\Fox\\Documents\\GitHub\\Serendipity\\file.txt");
     
+
     out << numBooks;
     for(int i = 0; i < numBooks; i++){
-	out <<  inventory[i]; 
+		out <<  inventory[i]; 
     }
         
     out.close();

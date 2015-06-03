@@ -16,8 +16,6 @@
 using namespace std;
 
 int main(int argc, char** argv) {
-    InventoryDatabase b;
-    cout << b.deleteBook(439064873);
 
     return 0;
 }
