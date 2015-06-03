@@ -19,7 +19,7 @@
 Module::Module() {
 	InventoryBook book;
         
-        //choose the correct file path for your computer
+        //choose the correct file path for your computer (important: also modify the path in the destructor)
 	//in.open("C:\\Users\\Fox\\Documents\\GitHub\\Serendipity\\file.txt");
         in.open("file.txt");
         
@@ -66,6 +66,7 @@ void Module::displayTable(int rows, int columns, std::string elements[]){
 
 Module::~Module() {
         
+    //again, enter the correct path for your environment
     out.open("file.txt");
     //out.open("C:\\Users\\Fox\\Documents\\GitHub\\Serendipity\\file.txt");
     cout << "destructor";
