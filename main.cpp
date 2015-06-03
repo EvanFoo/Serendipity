@@ -16,7 +16,7 @@
 using namespace std;
 
 int main(int argc, char** argv) {
-    
+    Module m;
 
     return 0;
 }

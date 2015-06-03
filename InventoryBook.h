@@ -41,13 +41,14 @@ public:
       }
 
     friend istream &operator>>( istream  &input, InventoryBook &b ){   
-        //must ignore unused \n characters
+        //must ignore unused \n characters, that is why there are input.ignore() method calls
         input >> b.ISBN;
         input.ignore();
         getline(input, b.title, '\n');
         getline(input, b.author, '\n');
         getline(input, b.publisher, '\n');
         input >> b.dateAdded >> b.wholesale >> b.retail >> b.quantity;
+        input.ignore(4);
         return input;            
     }
     

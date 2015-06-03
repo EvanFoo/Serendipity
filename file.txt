@@ -1,73 +1,73 @@
-8
+9
 74753269
 Harry Potter and the Philosopher's Stone
 J.K. Rowling
 Scholastic
 1433100430
-15.00
-25.00
+15
+25
 1000
-9780439064873
+439064873
 Harry Potter and the Chamber of Secrets
 J.K. Rowling
 Scholastic
 1433100430
-15.00
-25.00
+15
+25
 1500
-439136369
+136369
 Harry Potter and the Prisoner of Azkaban
 J.K. Rowling
 Scholastic
 1433100430
-15.00
-25.00
+15
+25
 1200
-1345314151
+5314151
 Harry Potter and the Philosopher's Stone
 J.K. Rowling
 Scholastic
 1433100430
-15.00
-25.00
+15
+25
 1000
-12341234234
+41234234
 Harry Potter and the Goblet of Fire
 J.K. Rowling
 Scholastic
 1433100430
-15.00
-25.00
+15
+25
 2000
-15487987656
+87987656
 Harry Potter and the Order of the Phoenix
 J.K. Rowling
 Scholastic
 1433100430
-15.00
-25.00
+15
+25
 2000
-15487568767
+87568767
 Harry Potter and the Half Blood Prince
 J.K. Rowling
 Scholastic
 1433100430
-15.00
-25.00
+15
+25
 1700
-1234432354
+4432354
 Harry Potter and the Deathly Hallows
 J.K. Rowling
 Scholastic
 1433100430
-15.00
-25.00
+15
+25
 1700
-6654345854
+4345854
 The Hobbit
 J.K. Rowling
 Scholastic
 1433100430
-15.00
-25.00
+15
+25
 1700
