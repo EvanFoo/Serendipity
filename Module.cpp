@@ -24,10 +24,12 @@ Module::Module() {
         in.open("file.txt");
         
 	in >> numBooks;
-	inventory = new InventoryBook[numBooks];
+        
+        //the size of this array in numBooks * 2, this means that there will always be enough space to add more 
+        //books to the array as long as the number of unique books is not more than doubled
+	inventory = new InventoryBook[numBooks * 2];
 	for(int i = 0; i < numBooks; i++){
 		in >> inventory[i]; 
-		cout << inventory[i];
 	}
         
         in.close();
@@ -69,7 +71,7 @@ Module::~Module() {
     //again, enter the correct path for your environment
     out.open("file.txt");
     //out.open("C:\\Users\\Fox\\Documents\\GitHub\\Serendipity\\file.txt");
-    cout << "destructor";
+    
     out << numBooks;
     for(int i = 0; i < numBooks; i++){
 	out <<  inventory[i]; 

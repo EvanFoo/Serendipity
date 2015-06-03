@@ -16,11 +16,11 @@ public:
     InventoryDatabase();
     InventoryDatabase(const InventoryDatabase& orig);
     void addBook( int inputISBN, std::string inputTitle, std::string inputAuthor, std::string inputPublisher, int inputQuantity, double inputWholesaleCost, double inputRetailPrice);
-    void deleteBook(int inputISBN);
+    //this will return a 1, if the function failed to find the book
+    int deleteBook(int inputISBN);
     void changeBook(int inputISBN);
     virtual ~InventoryDatabase();
 private:
-    
 };
 
 #endif	/* INVENTORYDATABASE_H */
