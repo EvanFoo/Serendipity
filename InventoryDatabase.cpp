@@ -51,9 +51,11 @@ void InventoryDatabase::addBook(int inputISBN, std::string inputTitle, std::stri
     
 };
 
-int InventoryDatabase::deleteBook(int inputISBN){
+int InventoryDatabase::deleteBook(){
+    int inputISBN;
     
-    
+    cout << "Enter the isbn number of the book you would like to delete: ";
+    cin >> inputISBN;
     
     //perform a linear search to find the location of the book with the input ISBN number
     int position = -1;
@@ -74,6 +76,7 @@ int InventoryDatabase::deleteBook(int inputISBN){
         numBooks--;
         
     }
+}
 
 int InventoryDatabase::find(int theISBN){
 	/*int first = 0, last = numBooks - 1, middle, position = -1;

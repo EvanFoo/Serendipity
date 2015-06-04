@@ -18,12 +18,12 @@ public:
 
     void addBook( int inputISBN, std::string inputTitle, std::string inputAuthor, std::string inputPublisher, int inputQuantity, double inputWholesaleCost, double inputRetailPrice);
     //this will return a 1, if the function failed to find the book
-    int deleteBook(int inputISBN);
+    int deleteBook();
     void changeBook(int inputISBN);
 
 	void lookUp();
     void addBook();
-	int find(int);
+    int find(int);
     void deleteBook();
     void changeBook();
     virtual ~InventoryDatabase();
