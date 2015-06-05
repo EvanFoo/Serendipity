@@ -1,6 +1,6 @@
 /* 
  * File:   Cashier.h
- * Author: Andy a.k.a. "HouseCatFury" a.k.a. "The One and Only" a.k.a. "A-God" a.k.a. "penguinholic" a.k.a. "Mr.StealYourGirl"
+ * Author: Andy a.k.a. "HouseCatFury" a.k.a. "I Ain't Got No Milk" a.k.a. "A-God" a.k.a. "penguinholic" a.k.a. "Mr.StealYourGirl"
  *
  * Created on May 27, 2015, 9:11 PM
  */
@@ -10,6 +10,7 @@
 
 #include "Module.h"
 #include <iostream>
+#include <iomanip>
 
 using namespace std;
 
@@ -29,14 +30,16 @@ public:
 
 			while (tempISBN[i] /= 0)
 			{
-				while (tempISBN[i] == inventory[index].getISBN())
+				if (tempISBN[i] == inventory[index].getISBN())
 				{
 					//output that book's info: ISBN, Title, Price
 					totalCost += inventory[index].getRetail();
 					index++;
 				}
 				i++;
-				cout << "$" << totalCost;
+				cout << "\nSales tax 9.75%: $" << totalCost * 9.75;
+				totalCost = 1.0975 * totalCost;
+				cout << "\nTotal Cost: $" << totalCost;
 			}
 			//Ask user if they want to quit the cashier module
 
