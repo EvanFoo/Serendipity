@@ -95,8 +95,9 @@ void InventoryDatabase::lookUp(){
 	int location;
 	cout << "Enter the ISBN of the book you want to lookup";
 	cin >> theISBN;
-	location = find(theISBN);
-	cout << inventory[location];
+	if( location = find(theISBN)){
+		cout << inventory[location];
+	}
 
 }
 
