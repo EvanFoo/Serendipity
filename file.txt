@@ -1,5 +1,5 @@
-9
-0747542155
+10
+747542155
 Harry Potter and the Prisoner of Azkaban
 J.K. Rowling
 Scholastic
@@ -7,7 +7,7 @@ Scholastic
 15
 25
 1200
-0545010225
+545010225
 Harry Potter and the Deathly Hallows
 J.K. Rowling
 Scholastic
@@ -15,7 +15,7 @@ Scholastic
 15
 25
 1700
-0747532699
+747532699
 Harry Potter and the Philosopher's Stone
 J.K. Rowling
 Scholastic
@@ -23,7 +23,7 @@ Scholastic
 15
 25
 1000
-0395177111
+395177111
 The Hobbit
 J. R. R. Tolkien
 George Allen & Unwin
@@ -31,7 +31,7 @@ George Allen & Unwin
 15
 25
 1700
-074754624
+74754624
 Harry Potter and the Goblet of Fire
 J.K. Rowling
 Scholastic
@@ -39,7 +39,7 @@ Scholastic
 15
 25
 2000
-0747538492
+747538492
 Harry Potter and the Chamber of Secrets
 J.K. Rowling
 Scholastic
@@ -47,7 +47,7 @@ Scholastic
 15
 25
 1500
-0747581088
+747581088
 Harry Potter and the Half Blood Prince
 J.K. Rowling
 Scholastic
@@ -55,7 +55,7 @@ Scholastic
 15
 25
 1700
-0747551006
+747551006
 Harry Potter and the Order of the Phoenix
 J.K. Rowling
 Scholastic
@@ -63,11 +63,19 @@ Scholastic
 15
 25
 2000
-9781612130286
-Fifty Shades of Grey
-E. L. James
-Vintage Books
-1433100430
-15
-25
-1600
+123
+t
+a
+p
+1433565831
+3
+4
+2
+0
+
+
+
+0
+0
+0
+0

@@ -51,7 +51,7 @@ void InventoryDatabase::addBook(int inputISBN, std::string inputTitle, std::stri
     
 };
 
-int InventoryDatabase::deleteBook(){
+void InventoryDatabase::deleteBook(){
     int inputISBN;
     
     cout << "Enter the isbn number of the book you would like to delete: ";
@@ -78,6 +78,7 @@ int InventoryDatabase::deleteBook(){
         cout << "Book successfully deleted" << endl;
         
     }
+	
 }
 
 int InventoryDatabase::find(int theISBN){
@@ -137,12 +138,18 @@ int InventoryDatabase::find(int theISBN){
 void InventoryDatabase::lookUp(){
 	int theISBN;
 	int location;
+	bool found;
 	cout << "Enter the ISBN of the book you want to lookup";
 	cin >> theISBN;
-	if( location = find(theISBN)){
-		cout << inventory[location];
+	for(int i = 0; i < numBooks; i++){
+		if(theISBN == inventory[i].getISBN()){
+			cout << inventory[i];
+			found = true;
+		}
 	}
-
+	if(!found){
+		cout << "Book not found";
+	}
 }
 
 void InventoryDatabase::addBook(){    
@@ -153,33 +160,34 @@ void InventoryDatabase::addBook(){
 	cout << "Enter ISBN:";
 	cin >> theISBN;
 	cin.ignore();
-	cout << "Enter title:";
+	cout << "Enter new title:";
 	getline(cin, title);
-	cout << "Enter author:";
+	cout << "Enter new author:";
 	getline(cin, author);
-	cout << "Enter Publisher:";
+	cout << "Enter new Publisher:";
 	getline(cin,publisher);
-	cout << "Enter quantity:";
+	cout << "Enter new quantity:";
 	cin >> quantity;
-	cout << "Enter wholesale cost:";
+	cout << "Enter new wholesale cost:";
 	cin >> wholesale;
-	cout << "Enter retail price:";
+	cout << "Enter new retail price";
 	cin >> retail;
-	cout << "Adding the book"<<endl;
-    inventory[numBooks].setISBN(theISBN);
-    inventory[numBooks].setTitle(title);
-    inventory[numBooks].setAuthor(author);
-    inventory[numBooks].setPublisher(publisher);
-    inventory[numBooks].setQuantity(quantity);
-    inventory[numBooks].setWholesale(wholesale);
-    inventory[numBooks].setRetail(retail);
-    inventory[numBooks].setDateAdded(time(0)); 
+	inventory[numBooks-1].setISBN(theISBN);
+	inventory[numBooks-1].setTitle(title);
+	inventory[numBooks-1].setAuthor(author);
+	inventory[numBooks-1].setPublisher(publisher);
+	inventory[numBooks-1].setQuantity(quantity);
+	inventory[numBooks-1].setWholesale(wholesale);
+	inventory[numBooks-1].setRetail(retail);
+	inventory[numBooks-1].setDateAdded(time(0));
+	cout << "Added" << endl << inventory[numBooks-1];
 	numBooks++;
     
 };
 
 void InventoryDatabase::changeBook(){
     int theISBN = -1;
+	bool found = false;
 	int index = 0;
 	string title, author, publisher;
 	int date, quantity;
@@ -187,30 +195,35 @@ void InventoryDatabase::changeBook(){
 	cout << "Enter the ISBN of the book you would like to change";
 	cin >> theISBN;
 	cin.ignore();
-	if(index = find(theISBN)){
-		cout << "Enter new title:";
-		getline(cin, title);
-		cout << "Enter new author:";
-		getline(cin, author);
-		cout << "Enter new Publisher:";
-		getline(cin,publisher);
-		cout << "Enter new quantity:";
-		cin >> quantity;
-		cout << "Enter new wholesale cost:";
-		cin >> wholesale;
-		cout << "Enter new retail price";
-		cin >> retail;
-	    inventory[index].setISBN(theISBN);
-		inventory[index].setTitle(title);
-		inventory[index].setAuthor(author);
-		inventory[index].setPublisher(publisher);
-	    inventory[index].setQuantity(quantity);
-		inventory[index].setWholesale(wholesale);
-		inventory[index].setRetail(retail);
-		inventory[index].setDateAdded(time(0)); 
+	for(int i = 0; i < numBooks; i++){
+		if(theISBN == inventory[i].getISBN()){
+			cout << inventory[i];
+			cout << "Enter new title:";
+			getline(cin, title);
+			cout << "Enter new author:";
+			getline(cin, author);
+			cout << "Enter new Publisher:";
+			getline(cin,publisher);
+			cout << "Enter new quantity:";
+			cin >> quantity;
+			cout << "Enter new wholesale cost:";
+			cin >> wholesale;
+			cout << "Enter new retail price";
+			cin >> retail;
+			inventory[index].setISBN(theISBN);
+			inventory[index].setTitle(title);
+			inventory[index].setAuthor(author);
+			inventory[index].setPublisher(publisher);
+			inventory[index].setQuantity(quantity);
+			inventory[index].setWholesale(wholesale);
+			inventory[index].setRetail(retail);
+			inventory[index].setDateAdded(time(0));
+			found = true;
+		}
 	}
-};
-
-InventoryDatabase::~InventoryDatabase() {
-}
+	if(!found){
+		cout << "Book not found";
+	}
+		 
+	};
 
