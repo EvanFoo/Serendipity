@@ -15,14 +15,18 @@ class InventoryDatabase: public Module {
 public:
     InventoryDatabase();
     InventoryDatabase(const InventoryDatabase& orig);
-	void lookUp();
+
+    void addBook( int inputISBN, std::string inputTitle, std::string inputAuthor, std::string inputPublisher, int inputQuantity, double inputWholesaleCost, double inputRetailPrice);
+    //this will return a 1, if the function failed to find the book
+    int deleteBook();
+    void changeBook(int inputISBN);
+
+    void lookUp();
     void addBook();
-	int find(int);
-    void deleteBook();
+    int find(int);
     void changeBook();
     virtual ~InventoryDatabase();
 private:
-    
 };
 
 #endif	/* INVENTORYDATABASE_H */

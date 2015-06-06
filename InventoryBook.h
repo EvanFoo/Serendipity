@@ -48,7 +48,7 @@ public:
         getline(input, b.author, '\n');
         getline(input, b.publisher, '\n');
         input >> b.dateAdded >> b.wholesale >> b.retail >> b.quantity;
-        input.ignore(4);
+        input.ignore();
         return input;            
     }
     

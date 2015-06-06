@@ -7,9 +7,6 @@
 
 #include "Cashier.h"
 
-Cashier::Cashier() {
-}
-
 Cashier::Cashier(const Cashier& orig) {
 }
 
