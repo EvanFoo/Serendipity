@@ -75,6 +75,8 @@ int InventoryDatabase::deleteBook(){
         //books get written to the file
         numBooks--;
         
+        cout << "Book successfully deleted" << endl;
+        
     }
 }
 

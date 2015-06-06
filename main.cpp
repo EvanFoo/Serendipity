@@ -17,6 +17,8 @@ using namespace std;
 
 int main(int argc, char** argv) {
 
+    InventoryDatabase d;
+    
     return 0;
 }
 

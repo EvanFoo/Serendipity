@@ -21,10 +21,9 @@ public:
     int deleteBook();
     void changeBook(int inputISBN);
 
-	void lookUp();
+    void lookUp();
     void addBook();
     int find(int);
-    void deleteBook();
     void changeBook();
     virtual ~InventoryDatabase();
 private:
