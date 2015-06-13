@@ -89,7 +89,7 @@ Module::~Module() {
         
     //again, enter the correct path for your environment
     //out.open("file.txt");
-    out.open("file.txt");
+    out.open("C:\\Users\\Fox\\Documents\\GitHub\\Serendipity\\file.txt");
     
 
     out << numBooks;

@@ -16,8 +16,56 @@ using namespace std;
 
 class Cashier: public Module {
 public:
-    
-    Cashier();
+	
+	//uncomment this if we use a implementation in the cpp file
+	//Cashier();	
+
+	Cashier()
+	{
+		Book tempBook;
+		int tempISBN[50];
+		int i = 0;
+		int index = 0;
+		double totalCost = 0.00;
+		int Choice = 0;
+
+		while (Choice == 0)
+		{
+			cout << "Cashier Module\n\n";
+			cout << "1. Transaction\n";
+			cout << "2. Exit\n";
+			cin >> Choice;
+		}
+
+		cout << "Enter the ISBNs for the book being purchased.\n";
+		{
+			cin >> tempISBN[50];
+
+			while (tempISBN[i] /= 0)
+			{
+				if (tempISBN[i] == inventory[index].getISBN())
+				{
+					//output that book's info: ISBN, Title, Price
+					inventory[index].setQuantity = inventory[index].getQuantity - 1;
+
+					cout << inventory[index].getISBN << "\t" << inventory[index].getTitle << "\t\t" << inventory[index].getRetail << endl;
+
+					totalCost += inventory[index].getRetail();
+
+					index++;
+				}
+				i++;
+				cout << "\nSales tax 9.75%: $" << totalCost * 9.75;
+				totalCost = 1.0975 * totalCost;
+				cout << "\nTotal Cost: $" << totalCost;
+			}
+			//Ask user if they want to quit the cashier module
+
+		}
+
+	
+	};
+
     Cashier(const Cashier& orig);
     virtual ~Cashier();
 private:
