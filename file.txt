@@ -79,7 +79,7 @@ Viking Press
 15
 25
 1000
-9780439450706
+9780439
 Artemis Fowl: The Arctic Incedent
 Eoin Colfer
 Hyperion Books
@@ -87,7 +87,7 @@ Hyperion Books
 15
 25
 1600
-141321318 
+141321318
 Artemis Fowl: The Eternity Code
 Eoin Colfer
 Viking Press
@@ -95,7 +95,7 @@ Viking Press
 15
 25
 1550
-141381647 
+141381647
 Artemis Fowl: The Opal Deception
 Eoin Colfer
 Puffin Books
@@ -103,7 +103,7 @@ Puffin Books
 15
 25
 1725
-141382686 
+141382686
 Artemis Fowl: The Lost Colony
 Eoin Colfer
 Puffin Books
@@ -111,7 +111,7 @@ Puffin Books
 15
 25
 950
-9781423108368
+9781423
 Artemis Fowl: The Time Paradox
 Eoin Colfer
 Puffin Books
@@ -119,7 +119,7 @@ Puffin Books
 15
 25
 300
-9781423128199
+9781423
 Artemis Fowl: The Atlantic Complex
 Eoin Colfer
 Miramax Books
@@ -127,7 +127,7 @@ Miramax Books
 15
 25
 1600
-1423161610
+123161610
 Artemis Fowl: The Last Guardian
 Eoin Colfer
 Viking Press
@@ -191,7 +191,7 @@ E. P. Dutton
 3
 7
 2100
-9781101406199
+978110
 The Cat Who Sniffed Glue
 Lilian Jackson Braun
 E. P. Dutton
