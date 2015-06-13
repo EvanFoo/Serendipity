@@ -17,6 +17,7 @@ public:
     InventoryDatabase(const InventoryDatabase& orig);
 
     void addBook( int inputISBN, std::string inputTitle, std::string inputAuthor, std::string inputPublisher, int inputQuantity, double inputWholesaleCost, double inputRetailPrice);
+    
     //this will return a 1, if the function failed to find the book
     int deleteBook();
     void changeBook(int inputISBN);

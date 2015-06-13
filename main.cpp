@@ -12,12 +12,13 @@
 #include "InventoryBook.h"
 #include "Module.h"
 #include "InventoryDatabase.h"
+#include "Cashier.h"
 
 using namespace std;
 
 int main(int argc, char** argv) {
 
-    InventoryDatabase d;
+    Cashier c;
     
     return 0;
 }
