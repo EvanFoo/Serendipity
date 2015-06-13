@@ -20,8 +20,6 @@ Module::Module() {
 	InventoryBook book;
 
 	in.open("file.txt");
-     
-        
 
 	in >> numBooks;
         
@@ -37,6 +35,26 @@ Module::Module() {
 }
 
 Module::Module(const Module& orig) {
+}
+
+void Module::sortByISBN(){
+    int startScan, minIndex;
+    InventoryBook minValue;
+    
+    for(startScan = 0; startScan < (numBooks -1); startScan++){
+        minIndex = startScan;
+        minValue = inventory[startScan];
+        for(int index = startScan +1; index < numBooks; index++){
+            if(inventory[index].getISBN() < minValue.getISBN()){
+                minValue = inventory[index];
+                minIndex = index;
+            }
+        }
+        inventory[minIndex] = inventory[startScan];
+        inventory[startScan] = minValue;
+        
+        cout << "sorting" << endl;
+    }
 }
 
 void Module::displayTable(int rows, int columns, std::string elements[]){
