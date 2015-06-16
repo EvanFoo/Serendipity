@@ -10,7 +10,7 @@
 
 #include <string>
 #include <ctime>
-#include<fstream>
+#include <fstream>
 #include "InventoryBook.h"
 
 class Module {

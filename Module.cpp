@@ -19,19 +19,32 @@
 Module::Module() {
 	InventoryBook book;
 
-	in.open("file.txt");
+        try{
+            in.open("file.txt");
+            
+            if(!in.good())
+                throw 10;
 
-	in >> numBooks;
-        
-        //the size of this array in numBooks * 2, this means that there will always be enough space to add more 
-        //books to the array as long as the number of unique books is not more than doubled
-	inventory = new InventoryBook[numBooks * 2];
+            in >> numBooks;
+ 
+            //the size of this array in numBooks * 2, this means that there will always be enough space to add more 
+            //books to the array as long as the number of unique books is not more than doubled
+            inventory = new InventoryBook[numBooks * 2];
 
-	for(int i = 0; i < numBooks; i++){
+            for(int i = 0; i < numBooks; i++){
 		in >> inventory[i]; 
-	}
+            }
         
-        in.close();
+            in.close();
+            
+        }catch(int e){
+            if(e == 10){
+                cout << "Failed to open the inventory file" << endl;
+                cout << "Please make sure you have an inventory file in the same \n directory as this program";
+            }
+        }catch(...){
+            cout << "Failed to allocate memory for the inventory" << endl;
+        }
 }
 
 Module::Module(const Module& orig) {
@@ -150,7 +163,12 @@ Module::~Module() {
         
     out.close();
         
-    delete [] inventory;
+    //just in case the memory cannot be deallocated
+    try{
+        delete [] inventory;
+    }catch(...){
+        cout << "Failed to deallocate memory for inventory" << endl;
+    }
 
 }
 

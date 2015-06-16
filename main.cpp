@@ -23,6 +23,10 @@ int main(int argc, char** argv) {
     cout << "Welcome to Serendipity books" << endl << endl << endl;
 
     do{
+        
+        //generic module that will be cast to a specific module type that the user chooses
+        Module * m;
+        
         cout << "1. Report" << endl;
         cout << "2. Cashier" << endl;
         cout << "3. Inventory Database" << endl;
@@ -31,14 +35,14 @@ int main(int argc, char** argv) {
         cin >> choice;
         
         if(choice == 1){
-                //Report * r = new Report();
-                //delete r;
+//            m = new Report;
+//            delete m;
         }else if(choice == 2){
-                Cashier * c = new Cashier();
-                delete c;
+            m = new Cashier();
+            delete m;
         }else if (choice == 3){
-                InventoryDatabase * i = new InventoryDatabase();
-                delete i;
+            m = new InventoryDatabase();
+            delete m;
         }else{
             cout << "Bye" << endl;
         }
