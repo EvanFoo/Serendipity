@@ -37,7 +37,7 @@ Module::Module() {
 Module::Module(const Module& orig) {
 }
 
-void Module::sortByISBN(){
+void Module::sortByElement(int element){
     int startScan, minIndex;
     InventoryBook minValue;
     
@@ -45,15 +45,67 @@ void Module::sortByISBN(){
         minIndex = startScan;
         minValue = inventory[startScan];
         for(int index = startScan +1; index < numBooks; index++){
-            if(inventory[index].getISBN() < minValue.getISBN()){
-                minValue = inventory[index];
-                minIndex = index;
+            
+            switch(element){
+                case 1:    
+                    if(inventory[index].getAuthor() < minValue.getAuthor()){
+                        minValue = inventory[index];
+                        minIndex = index;
+                    }
+                    break;
+                case 2:    
+                    if(inventory[index].getDateAdded() < minValue.getDateAdded()){
+                        minValue = inventory[index];
+                        minIndex = index;
+                    }
+                    break;
+                case 3:    
+                    if(inventory[index].getISBN() < minValue.getISBN()){
+                        minValue = inventory[index];
+                        minIndex = index;
+                    }
+                    break;
+                case 4:    
+                    if(inventory[index].getPublisher() < minValue.getPublisher()){
+                        minValue = inventory[index];
+                        minIndex = index;
+                    }
+                    break;
+                case 5:    
+                    if(inventory[index].getPublisher() < minValue.getPublisher()){
+                        minValue = inventory[index];
+                        minIndex = index;
+                    }
+                    break;
+                case 6:    
+                    if(inventory[index].getQuantity() < minValue.getQuantity()){
+                        minValue = inventory[index];
+                        minIndex = index;
+                    }
+                    break;
+                case 7:    
+                    if(inventory[index].getRetail() < minValue.getRetail()){
+                        minValue = inventory[index];
+                        minIndex = index;
+                    }
+                    break;
+                case 8:    
+                    if(inventory[index].getTitle() < minValue.getTitle()){
+                        minValue = inventory[index];
+                        minIndex = index;
+                    }
+                    break;
+                case 9:    
+                    if(inventory[index].getWholesale() < minValue.getWholesale()){
+                        minValue = inventory[index];
+                        minIndex = index;
+                    }
+                    break;
             }
-        }
+        }   
         inventory[minIndex] = inventory[startScan];
         inventory[startScan] = minValue;
         
-        cout << "sorting" << endl;
     }
 }
 
