@@ -6,7 +6,7 @@ Scholastic
 1433100430
 15
 25
-1200
+1196
 545010225
 Harry Potter and the Deathly Hallows
 J.K. Rowling
@@ -63,7 +63,7 @@ Scholastic
 15
 25
 2000
-0525478817
+525478817
 The Fault in Our Stars
 John Green
 Dutton Books
@@ -71,7 +71,7 @@ Dutton Books
 15
 25
 1500
-0670899623
+670899623
 Artemis Fowl
 Eoin Colfer
 Viking Press
@@ -79,7 +79,7 @@ Viking Press
 15
 25
 1000
-9780439450706
+9780439
 Artemis Fowl: The Arctic Incedent
 Eoin Colfer
 Hyperion Books
@@ -87,7 +87,7 @@ Hyperion Books
 15
 25
 1600
-0141321318 
+141321318
 Artemis Fowl: The Eternity Code
 Eoin Colfer
 Viking Press
@@ -95,7 +95,7 @@ Viking Press
 15
 25
 1550
-0141381647 
+141381647
 Artemis Fowl: The Opal Deception
 Eoin Colfer
 Puffin Books
@@ -103,7 +103,7 @@ Puffin Books
 15
 25
 1725
-0141382686 
+141382686
 Artemis Fowl: The Lost Colony
 Eoin Colfer
 Puffin Books
@@ -111,7 +111,7 @@ Puffin Books
 15
 25
 950
-9781423108368
+9781423
 Artemis Fowl: The Time Paradox
 Eoin Colfer
 Puffin Books
@@ -119,7 +119,7 @@ Puffin Books
 15
 25
 300
-9781423128199
+9781423
 Artemis Fowl: The Atlantic Complex
 Eoin Colfer
 Miramax Books
@@ -127,7 +127,7 @@ Miramax Books
 15
 25
 1600
-1423161610
+123161610
 Artemis Fowl: The Last Guardian
 Eoin Colfer
 Viking Press
@@ -135,7 +135,7 @@ Viking Press
 15
 25
 1550
-0515144088
+515144088
 The Cat Who Could Read Backwards
 Lilian Jackson Braun
 E. P. Dutton
@@ -143,7 +143,7 @@ E. P. Dutton
 3
 7
 1275
-0515087122
+515087122
 The Cat Who Ate Danish Modern
 Lilian Jackson Braun
 E. P. Dutton
@@ -151,7 +151,7 @@ E. P. Dutton
 3
 7
 1690
-000231116
+231116
 The Cat Who Turned On and Off
 Lilian Jackson Braun
 E. P. Dutton
@@ -159,7 +159,7 @@ E. P. Dutton
 3
 7
 1337
-0515090166
+515090166
 The Cat Who Saw Red
 Lilian Jackson Braun
 E. P. Dutton
@@ -167,7 +167,7 @@ E. P. Dutton
 3
 7
 800
-0515090506
+515090506
 The Cat Who Played Brahms
 Lilian Jackson Braun
 E. P. Dutton
@@ -175,7 +175,7 @@ E. P. Dutton
 3
 7
 950
-0515093203
+515093203
 The Cat Who Played Post Office
 Lilian Jackson Braun
 E. P. Dutton
@@ -183,7 +183,7 @@ E. P. Dutton
 3
 7
 1200
-0515095826
+515095826
 The Cat Who Knew Shakespeare
 Lilian Jackson Braun
 E. P. Dutton
@@ -191,7 +191,7 @@ E. P. Dutton
 3
 7
 2100
-9781101406199
+978110
 The Cat Who Sniffed Glue
 Lilian Jackson Braun
 E. P. Dutton

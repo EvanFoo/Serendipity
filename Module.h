@@ -10,7 +10,7 @@
 
 #include <string>
 #include <ctime>
-#include<fstream>
+#include <fstream>
 #include "InventoryBook.h"
 
 class Module {
@@ -22,6 +22,9 @@ protected:
 public:
     Module();
     Module(const Module& orig);
+    
+    //call this to sort the inventory array by ISBN
+    void sortByElement(int element);
     void displayTable(int rows, int columns, std::string elements[]);
     virtual ~Module();
 

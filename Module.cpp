@@ -19,24 +19,107 @@
 Module::Module() {
 	InventoryBook book;
 
-	in.open("C:\\Users\\Fox\\Documents\\GitHub\\Serendipity\\file.txt");
-     
-        
+        try{
+            in.open("file.txt");
+            
+            if(!in.good())
+                throw 10;
 
-	in >> numBooks;
-        
-        //the size of this array in numBooks * 2, this means that there will always be enough space to add more 
-        //books to the array as long as the number of unique books is not more than doubled
-	inventory = new InventoryBook[numBooks * 2];
+            in >> numBooks;
+ 
+            //the size of this array in numBooks * 2, this means that there will always be enough space to add more 
+            //books to the array as long as the number of unique books is not more than doubled
+            inventory = new InventoryBook[numBooks * 2];
 
-	for(int i = 0; i < numBooks; i++){
+            for(int i = 0; i < numBooks; i++){
 		in >> inventory[i]; 
-	}
+            }
         
-        in.close();
+            in.close();
+            
+        }catch(int e){
+            if(e == 10){
+                cout << "Failed to open the inventory file" << endl;
+                cout << "Please make sure you have an inventory file in the same \n directory as this program";
+            }
+        }catch(...){
+            cout << "Failed to allocate memory for the inventory" << endl;
+        }
 }
 
 Module::Module(const Module& orig) {
+}
+
+void Module::sortByElement(int element){
+    int startScan, minIndex;
+    InventoryBook minValue;
+    
+    for(startScan = 0; startScan < (numBooks -1); startScan++){
+        minIndex = startScan;
+        minValue = inventory[startScan];
+        for(int index = startScan +1; index < numBooks; index++){
+            
+            switch(element){
+                case 1:    
+                    if(inventory[index].getAuthor() < minValue.getAuthor()){
+                        minValue = inventory[index];
+                        minIndex = index;
+                    }
+                    break;
+                case 2:    
+                    if(inventory[index].getDateAdded() < minValue.getDateAdded()){
+                        minValue = inventory[index];
+                        minIndex = index;
+                    }
+                    break;
+                case 3:    
+                    if(inventory[index].getISBN() < minValue.getISBN()){
+                        minValue = inventory[index];
+                        minIndex = index;
+                    }
+                    break;
+                case 4:    
+                    if(inventory[index].getPublisher() < minValue.getPublisher()){
+                        minValue = inventory[index];
+                        minIndex = index;
+                    }
+                    break;
+                case 5:    
+                    if(inventory[index].getPublisher() < minValue.getPublisher()){
+                        minValue = inventory[index];
+                        minIndex = index;
+                    }
+                    break;
+                case 6:    
+                    if(inventory[index].getQuantity() < minValue.getQuantity()){
+                        minValue = inventory[index];
+                        minIndex = index;
+                    }
+                    break;
+                case 7:    
+                    if(inventory[index].getRetail() < minValue.getRetail()){
+                        minValue = inventory[index];
+                        minIndex = index;
+                    }
+                    break;
+                case 8:    
+                    if(inventory[index].getTitle() < minValue.getTitle()){
+                        minValue = inventory[index];
+                        minIndex = index;
+                    }
+                    break;
+                case 9:    
+                    if(inventory[index].getWholesale() < minValue.getWholesale()){
+                        minValue = inventory[index];
+                        minIndex = index;
+                    }
+                    break;
+            }
+        }   
+        inventory[minIndex] = inventory[startScan];
+        inventory[startScan] = minValue;
+        
+    }
 }
 
 void Module::displayTable(int rows, int columns, std::string elements[]){
@@ -70,8 +153,7 @@ void Module::displayTable(int rows, int columns, std::string elements[]){
 Module::~Module() {
         
     //again, enter the correct path for your environment
-    //out.open("file.txt");
-    out.open("C:\\Users\\Fox\\Documents\\GitHub\\Serendipity\\file.txt");
+    out.open("file.txt");
     
 
     out << numBooks;
@@ -81,7 +163,12 @@ Module::~Module() {
         
     out.close();
         
-    delete [] inventory;
+    //just in case the memory cannot be deallocated
+    try{
+        delete [] inventory;
+    }catch(...){
+        cout << "Failed to deallocate memory for inventory" << endl;
+    }
 
 }
 

@@ -29,23 +29,6 @@ InventoryBook::InventoryBook() {
 InventoryBook::InventoryBook(const InventoryBook& orig) {
 }
 
-// InventoryBook & InventoryBook::operator=(InventoryBook& other){
-//        InventoryBook temp;
-//        temp.setISBN(other.getISBN());
-//        temp.setTitle(other.getTitle());
-//        temp.setAuthor(other.getAuthor());
-//        temp.setPublisher(other.getPublisher());
-//        temp.setDateAdded(other.getDateAdded());
-//        temp.setWholesale(other.getWholesale());
-//        temp.setRetail(other.getRetail());
-//        temp.setQuantity(other.getQuantity());
-//        
-//        InventoryBook & tempRef = temp;
-//        
-//        cout << "= operator" << endl;
-//        return tempRef;
-// }
-
 InventoryBook::~InventoryBook() {
 }
 
