@@ -26,15 +26,10 @@ public:
 		int i = 0;
 		int index = 0;
 		double totalCost = 0.00;
-		int numBooks;
 
-		cout << "How many books are being purchased?\n";
-		cin >> numBooks;
-
-		cout << "\nEnter the ISBNs for the book being purchased.\n";
+		cout << "Enter the ISBNs for the book being purchased.\n";
 		{
-			for (int j = 0; j < numBooks; j++)
-				cin >> tempISBN[i];
+			cin >> tempISBN[50];
 
 			while (tempISBN[i] /= 0)
 			{
@@ -49,7 +44,7 @@ public:
 				totalCost = 1.0975 * totalCost;
 				cout << "\nTotal Cost: $" << totalCost;
 			}
-			system("pause");
+			//Ask user if they want to quit the cashier module
 
 		}
 
