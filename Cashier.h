@@ -77,7 +77,9 @@ private:
     vector<double> purchasedBookPrices;
     vector<int> purchasedBookISBNs;
     int numberOfPurchasedBooks;
-    void buyBook(int);
+    
+    //will return a -1 if the book is not found
+    int buyBook(int);
     
     
 };

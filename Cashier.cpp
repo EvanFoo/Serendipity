@@ -18,7 +18,9 @@ Cashier::Cashier(){
         cin.ignore();
         if(tempISBN > 0){
             cout << endl;
-            buyBook(tempISBN);
+            if(buyBook(tempISBN) == -1){
+                cout << "Book not found" << endl;
+            };
         }
     }
     
@@ -41,7 +43,7 @@ Cashier::Cashier(){
 Cashier::Cashier(const Cashier& orig) {
 }
 
-void Cashier::buyBook(int inputISBN){
+int Cashier::buyBook(int inputISBN){
 
     for(int i = 0; i < numBooks; i++){
         if(inventory[i].getISBN() == inputISBN){
@@ -60,6 +62,8 @@ void Cashier::buyBook(int inputISBN){
             }else{
                 cout << "Sorry, sold out" << endl;
             }
+        }else{
+            return -1;
         }
     }
 }

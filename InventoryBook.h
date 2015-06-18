@@ -22,6 +22,7 @@ public:
     InventoryBook(const InventoryBook& orig);
     int getQuantity(){return quantity;};
     void setQuantity(int inputQuantity){quantity = inputQuantity;};
+    void display();
     
     InventoryBook & operator=(const InventoryBook& other){
         this->setISBN(other.ISBN);

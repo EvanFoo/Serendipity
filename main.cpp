@@ -35,8 +35,8 @@ int main(int argc, char** argv) {
         cin >> choice;
         
         if(choice == 1){
-//            m = new Report;
-//            delete m;
+            m = new Report;
+            delete m;
         }else if(choice == 2){
             m = new Cashier();
             delete m;

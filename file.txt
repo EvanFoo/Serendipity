@@ -1,68 +1,68 @@
-25
-747542155
-Harry Potter and the Prisoner of Azkaban
-J.K. Rowling
-Scholastic
+26
+515144088
+The Cat Who Could Read Backwards
+Lilian Jackson Braun
+E. P. Dutton
 1433100430
-15
-25
-1196
-545010225
-Harry Potter and the Deathly Hallows
-J.K. Rowling
-Scholastic
+3
+7
+1274
+515087122
+The Cat Who Ate Danish Modern
+Lilian Jackson Braun
+E. P. Dutton
 1433100430
-15
-25
-1700
-747532699
-Harry Potter and the Philosopher's Stone
-J.K. Rowling
-Scholastic
+3
+7
+1690
+231116
+The Cat Who Turned On and Off
+Lilian Jackson Braun
+E. P. Dutton
 1433100430
-15
-25
-1000
-395177111
-The Hobbit
-J. R. R. Tolkien
-George Allen & Unwin
+3
+7
+1337
+515090166
+The Cat Who Saw Red
+Lilian Jackson Braun
+E. P. Dutton
 1433100430
-15
-25
-1700
-74754624
-Harry Potter and the Goblet of Fire
-J.K. Rowling
-Scholastic
+3
+7
+800
+515090506
+The Cat Who Played Brahms
+Lilian Jackson Braun
+E. P. Dutton
 1433100430
-15
-25
-2000
-747538492
-Harry Potter and the Chamber of Secrets
-J.K. Rowling
-Scholastic
+3
+7
+950
+515093203
+The Cat Who Played Post Office
+Lilian Jackson Braun
+E. P. Dutton
 1433100430
-15
-25
-1500
-747581088
-Harry Potter and the Half Blood Prince
-J.K. Rowling
-Scholastic
+3
+7
+1200
+515095826
+The Cat Who Knew Shakespeare
+Lilian Jackson Braun
+E. P. Dutton
 1433100430
-15
-25
-1700
-747551006
-Harry Potter and the Order of the Phoenix
-J.K. Rowling
-Scholastic
+3
+7
+2100
+978110
+The Cat Who Sniffed Glue
+Lilian Jackson Braun
+E. P. Dutton
 1433100430
-15
-25
-2000
+3
+7
+2300
 525478817
 The Fault in Our Stars
 John Green
@@ -135,67 +135,75 @@ Viking Press
 15
 25
 1550
-515144088
-The Cat Who Could Read Backwards
-Lilian Jackson Braun
-E. P. Dutton
+747542155
+Harry Potter and the Prisoner of Azkaban
+J.K. Rowling
+Scholastic
 1433100430
-3
-7
-1275
-515087122
-The Cat Who Ate Danish Modern
-Lilian Jackson Braun
-E. P. Dutton
+15
+25
+1196
+545010225
+Harry Potter and the Deathly Hallows
+J.K. Rowling
+Scholastic
 1433100430
-3
-7
-1690
-231116
-The Cat Who Turned On and Off
-Lilian Jackson Braun
-E. P. Dutton
+15
+25
+1700
+747532699
+Harry Potter and the Philosopher's Stone
+J.K. Rowling
+Scholastic
 1433100430
-3
-7
-1337
-515090166
-The Cat Who Saw Red
-Lilian Jackson Braun
-E. P. Dutton
+15
+25
+1000
+395177111
+The Hobbit
+J. R. R. Tolkien
+George Allen & Unwin
 1433100430
-3
-7
-800
-515090506
-The Cat Who Played Brahms
-Lilian Jackson Braun
-E. P. Dutton
+15
+25
+1700
+74754624
+Harry Potter and the Goblet of Fire
+J.K. Rowling
+Scholastic
 1433100430
-3
-7
-950
-515093203
-The Cat Who Played Post Office
-Lilian Jackson Braun
-E. P. Dutton
+15
+25
+2000
+747538492
+Harry Potter and the Chamber of Secrets
+J.K. Rowling
+Scholastic
 1433100430
-3
-7
-1200
-515095826
-The Cat Who Knew Shakespeare
-Lilian Jackson Braun
-E. P. Dutton
+15
+25
+1500
+747581088
+Harry Potter and the Half Blood Prince
+J.K. Rowling
+Scholastic
 1433100430
-3
-7
-2100
-978110
-The Cat Who Sniffed Glue
-Lilian Jackson Braun
-E. P. Dutton
-1433100430
-3
-7
-2300
+15
+25
+1700
+156858
+Steal This Book
+Abbie Hoffman
+Da Capo Press
+1434638223
+12.62
+61.67
+100
+394588
+Jurassic Park
+Micheal Crichton
+Alfred Knopf
+1434639072
+14.99
+24.99
+400

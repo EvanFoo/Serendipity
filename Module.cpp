@@ -61,19 +61,19 @@ void Module::sortByElement(int element){
             
             switch(element){
                 case 1:    
-                    if(inventory[index].getAuthor() < minValue.getAuthor()){
+                    if(inventory[index].getISBN() < minValue.getISBN()){
                         minValue = inventory[index];
                         minIndex = index;
                     }
                     break;
                 case 2:    
-                    if(inventory[index].getDateAdded() < minValue.getDateAdded()){
+                    if(inventory[index].getTitle() < minValue.getTitle()){
                         minValue = inventory[index];
                         minIndex = index;
                     }
                     break;
                 case 3:    
-                    if(inventory[index].getISBN() < minValue.getISBN()){
+                    if(inventory[index].getAuthor() < minValue.getAuthor()){
                         minValue = inventory[index];
                         minIndex = index;
                     }
@@ -85,13 +85,13 @@ void Module::sortByElement(int element){
                     }
                     break;
                 case 5:    
-                    if(inventory[index].getPublisher() < minValue.getPublisher()){
+                    if(inventory[index].getDateAdded() < minValue.getDateAdded()){
                         minValue = inventory[index];
                         minIndex = index;
                     }
                     break;
                 case 6:    
-                    if(inventory[index].getQuantity() < minValue.getQuantity()){
+                    if(inventory[index].getWholesale() < minValue.getWholesale()){
                         minValue = inventory[index];
                         minIndex = index;
                     }
@@ -103,13 +103,7 @@ void Module::sortByElement(int element){
                     }
                     break;
                 case 8:    
-                    if(inventory[index].getTitle() < minValue.getTitle()){
-                        minValue = inventory[index];
-                        minIndex = index;
-                    }
-                    break;
-                case 9:    
-                    if(inventory[index].getWholesale() < minValue.getWholesale()){
+                    if(inventory[index].getQuantity() < minValue.getQuantity()){
                         minValue = inventory[index];
                         minIndex = index;
                     }

@@ -14,13 +14,12 @@ class Report: public Module {
 public:
     Report();
     Report(const Report& orig);
-    void repListing();
-    void repWholesale();
-    void repRetail();
-    void repQty();
-    void repCost();
-    void repAge();
-    void reports();
+    void inventoryList();
+    void inventoryWholeSaleValue();
+    void inventoryRetailValue();
+    void listByQuantity();
+    void listByCost();
+    void listByAge();
     virtual ~Report();
 private:
 
