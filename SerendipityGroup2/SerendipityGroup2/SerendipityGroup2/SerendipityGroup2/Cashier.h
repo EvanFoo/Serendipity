@@ -32,7 +32,7 @@ private:
 	vector<double> purchasedBookPrices;
 	vector<int> purchasedBookISBNs;
 	int numberOfPurchasedBooks;
-	void buyBook(int);
+	int buyBook(int);
 
 
 };

@@ -19,12 +19,23 @@ Cashier::Cashier(){
 
 	while (tempISBN > 0){
 		cout << ":";
-		cin >> tempISBN;
-		cin.ignore();
-		if (tempISBN > 0){
-			cout << endl;
-			buyBook(tempISBN);
+                
+                //ensure that the input is good
+                if(cin >> tempISBN){
+                    cin.ignore();
+                    if (tempISBN > 0){
+                        cout << endl;
+			if(buyBook(tempISBN) == -1){
+                            cout << "Book not found" << endl;  
+                        };
 		}
+                }else{
+                    cin.clear();
+                    cin.ignore(100, '\n');
+                    cout << "Bad input please enter an integer" << endl;
+                    
+                    tempISBN = 10;
+                }
 	}
 
 	cout << "Receipt " << endl;
@@ -46,7 +57,7 @@ Cashier::Cashier(){
 Cashier::Cashier(const Cashier& orig) {
 }
 
-void Cashier::buyBook(int inputISBN){
+int Cashier::buyBook(int inputISBN){
 
 	for (int i = 0; i < numBooks; i++){
 		if (inventory[i].getISBN() == inputISBN){
@@ -66,8 +77,12 @@ void Cashier::buyBook(int inputISBN){
 			else{
 				cout << "Sorry, sold out" << endl;
 			}
-		}
+		}else{
+                    return -1;
+                }
 	}
+        
+        return 0;
 }
 
 Cashier::~Cashier() {

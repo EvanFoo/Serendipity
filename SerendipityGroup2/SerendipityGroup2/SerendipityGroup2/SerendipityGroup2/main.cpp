@@ -18,7 +18,7 @@
 using namespace std;
 
 int main(int argc, char** argv) {
-	int choice;
+	string choice;
 
 	cout << "Welcome to Serendipity books" << endl << endl << endl;
 
@@ -34,23 +34,25 @@ int main(int argc, char** argv) {
 
 		cin >> choice;
 
-		if (choice == 1){
+		if (choice == "1"){
 			m = new Report;
 			delete m;
 		}
-		else if (choice == 2){
+		else if (choice == "2"){
 			m = new Cashier();
 			delete m;
 		}
-		else if (choice == 3){
+		else if (choice == "3"){
 			m = new InventoryDatabase();
 			delete m;
 		}
 		else{
-			cout << "Bye" << endl;
+                    cout << "Command not found. Press any key to continue" << endl;
+                    cin.ignore();
+                    cin.get();
 		}
 
-	} while (choice != 4);
+	} while (choice != "4");
 
 
 	return 0;

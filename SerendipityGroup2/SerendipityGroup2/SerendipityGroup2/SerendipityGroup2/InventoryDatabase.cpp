@@ -11,27 +11,23 @@
 #include <iostream>
 
 InventoryDatabase::InventoryDatabase() {
-	int choice = 0;
-	while (choice != 5){
-		choice = 0;
+	string choice = "0";
+	while (choice != "5"){
+		choice = "0";
 		cout << "1.Lookup\n2.Add\n3.Delete\n4.Change\n5.End";
 		cin >> choice;
-		switch (choice){
-		case 1:
+		
+		if(choice == "1")
 			lookUp();
-			break;
-		case 2:
+		else if(choice == "2")
 			addBook();
-			break;
-		case 3:
+		else if(choice == "3")
 			deleteBook();
-			break;
-		case 4:
+		else if(choice == "4")
 			changeBook();
-			break;
-		case 5:
-			break;
-		}
+		else
+                    cout << "Choice not found" << endl;
+                
 
 	}
 
