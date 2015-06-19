@@ -40,18 +40,20 @@ void InventoryDatabase::deleteBook(){
 	int inputISBN;
 
 	cout << "Enter the isbn number of the book you would like to delete: ";
-	cin >> inputISBN;
-
-	//perform a linear search to find the location of the book with the input ISBN number
-	int position = -1;
-	for (int i = 0; i < numBooks; i++){
+	
+        //only proceed if the input is good
+        if(cin >> inputISBN){
+            
+            //perform a linear search to find the location of the book with the input ISBN number
+            int position = -1;
+            for (int i = 0; i < numBooks; i++){
 		if (inventory[i].getISBN() == inputISBN){
 			position = i;
 		}
-	}
+            }
 
-	//make sure that the book was found before you remove the book
-	if (position != -1){
+            //make sure that the book was found before you remove the book
+            if (position != -1){
 		for (int i = position + 1; i < numBooks; i++){
 			inventory[i - 1] = inventory[i];
 		}
@@ -61,8 +63,12 @@ void InventoryDatabase::deleteBook(){
 		numBooks--;
 
 		cout << "Book successfully deleted" << endl;
-
-	}
+            }
+            }else{
+                cin.clear();
+                cin.ignore(100, '\n');
+                cout << "Bad input, please enter an integer";
+            }
 
 }
 
@@ -89,16 +95,23 @@ void InventoryDatabase::lookUp(){
 	int location;
 	bool found = true;
 	cout << "Enter the ISBN of the book you want to lookup";
-	cin >> theISBN;
-	for (int i = 0; i < numBooks; i++){
+	
+        //ensure that the input is good
+        if(cin >> theISBN){
+            for (int i = 0; i < numBooks; i++){
 		if (theISBN == inventory[i].getISBN()){
 			inventory[i].display();
 			found = true;
 		}
-	}
-	if (!found){
+            }
+            if (!found){
 		cout << "Book not found";
-	}
+            }
+        }else{
+                cin.clear();
+                cin.ignore(100, '\n');
+                cout << "Bad input, please enter an integer";
+        }
 }
 
 void InventoryDatabase::addBook(){
@@ -106,7 +119,9 @@ void InventoryDatabase::addBook(){
 	string title, author, publisher;
 	int date, quantity;
 	double wholesale, retail;
-	cout << "Enter ISBN:";
+	
+        
+        cout << "Enter ISBN:";
 	cin >> theISBN;
 	cin.ignore();
 	cout << "Enter title:";
@@ -121,19 +136,27 @@ void InventoryDatabase::addBook(){
 	cin >> wholesale;
 	cout << "Enter retail price";
 	cin >> retail;
+        
+        //only proceed if the input was done properly
+        if(cin.fail()){
+            cin.clear();
+            cin.ignore();
+            cout << endl << endl << "Please enter an integer for the isbn and quantity" << endl;
+        }else{
 
-	numBooks++;
+            numBooks++;
 
-	inventory[numBooks - 1].setISBN(theISBN);
-	inventory[numBooks - 1].setTitle(title);
-	inventory[numBooks - 1].setAuthor(author);
-	inventory[numBooks - 1].setPublisher(publisher);
-	inventory[numBooks - 1].setQuantity(quantity);
-	inventory[numBooks - 1].setWholesale(wholesale);
-	inventory[numBooks - 1].setRetail(retail);
-	inventory[numBooks - 1].setDateAdded(time(0));
-	cout << "Added" << endl;
-	inventory[numBooks - 1].display();
+            inventory[numBooks - 1].setISBN(theISBN);
+            inventory[numBooks - 1].setTitle(title);
+            inventory[numBooks - 1].setAuthor(author);
+            inventory[numBooks - 1].setPublisher(publisher);
+            inventory[numBooks - 1].setQuantity(quantity);
+            inventory[numBooks - 1].setWholesale(wholesale);
+            inventory[numBooks - 1].setRetail(retail);
+            inventory[numBooks - 1].setDateAdded(time(0));
+            cout << "Added" << endl;
+            inventory[numBooks - 1].display();
+        }
 
 };
 
@@ -171,12 +194,20 @@ void InventoryDatabase::changeBook(){
 		cin >> wholesale;
 		cout << "Enter new retail price";
 		cin >> retail;
-		inventory[index].setTitle(title);
-		inventory[index].setAuthor(author);
-		inventory[index].setPublisher(publisher);
-		inventory[index].setQuantity(quantity);
-		inventory[index].setWholesale(wholesale);
-		inventory[index].setRetail(retail);
+		
+                //only change the book if the input was good
+                if(cin.fail()){
+                    cin.clear();
+                    cin.ignore();
+                    cout << endl << endl << "Please enter an integer for the isbn and quantity" << endl;
+                }else{
+                    inventory[index].setTitle(title);
+                    inventory[index].setAuthor(author);
+                    inventory[index].setPublisher(publisher);
+                    inventory[index].setQuantity(quantity);
+                    inventory[index].setWholesale(wholesale);
+                    inventory[index].setRetail(retail);
+                }
 		found = true;
 	}
 	

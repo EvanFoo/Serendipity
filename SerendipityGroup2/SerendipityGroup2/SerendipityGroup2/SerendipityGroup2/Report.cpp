@@ -2,8 +2,8 @@
 #include "Report.h"
 
 Report::Report(){
-	int choice = 0;
-	while (choice != 7){
+        string choice = "0";
+	while (choice != "7"){
 		cout << "1. Inventory List" << endl;
 		cout << "2. Inventory Wholesale Value" << endl;
 		cout << "3. Inventory Retail Value" << endl;
@@ -12,32 +12,24 @@ Report::Report(){
 		cout << "6. List By Age" << endl;
 		cout << "7. End" << endl;
 		cin >> choice;
-		switch (choice){
-		case 1:
-			inventoryList();
-			break;
-		case 2:
+		
+                if(choice == "1")
+                    inventoryList();
+                else if(choice == "2")
 			inventoryWholeSaleValue();
-			break;
-		case 3:
+		else if(choice == "3")
 			inventoryRetailValue();
-			break;
-		case 4:
+		else if(choice == "4")
 			listByQuantity();
-			break;
-		case 5:
+		else if(choice == "5")
 			listByCost();
-			break;
-		case 6:
+		else if(choice == "6")
 			listByAge();
-			break;
-			//Choice 7 exits the module
-		case 7:
-			break;
-		default:
-			cout << "Please choose an option 1 - 6" << endl;
-
-		}
+                //Choice 7 exits the module
+		else if(choice == "7")
+                    cout << "Exiting to main menu" << endl;
+                else 
+                    cout << "Please enter a choice 1 - 7" << endl;
 
 	}
 }
@@ -49,6 +41,7 @@ void Report::inventoryList(){
 };
 
 void Report::inventoryWholeSaleValue(){
+        double totalWholesaleValue;
 	string * titles = new string[numBooks];
 	double * wholesalePrices = new double[numBooks];
 
@@ -58,15 +51,20 @@ void Report::inventoryWholeSaleValue(){
 	for (int i = 0; i < numBooks; i++){
 		titles[i] = inventory[i].getTitle();
 		wholesalePrices[i] = inventory[i].getWholesale();
+                
+                totalWholesaleValue += (inventory[i].getWholesale() * inventory[i].getQuantity());
 	};
 
 	tChart(titles, wholesalePrices, numBooks);
+        
+        cout << endl << " Total inventory wholesale value: $" << totalWholesaleValue << endl;
 
 	delete[] titles;
 	delete[] wholesalePrices;
 }
 
 void Report::inventoryRetailValue(){
+        double totalRetailValue;
 	string * titles = new string[numBooks];
 	double * retailPrices = new double[numBooks];
 
@@ -76,29 +74,41 @@ void Report::inventoryRetailValue(){
 	for (int i = 0; i < numBooks; i++){
 		titles[i] = inventory[i].getTitle();
 		retailPrices[i] = inventory[i].getRetail();
+                
+                totalRetailValue += (inventory[i].getRetail() * inventory[i].getQuantity());
 	};
 
 	tChart(titles, retailPrices, numBooks);
+        
+        cout << endl << " Total inventory wholesale value: $" << totalRetailValue << endl;
 
 	delete[] titles;
 	delete[] retailPrices;
 }
 
 void Report::listByQuantity(){
-	sortByElement(8);
+    
+    int totalQuantity;
+    
+    //this will sort the books by quantity
+    sortByElement(8);
 
-	string * titles = new string[numBooks];
-	int * quantities = new int[numBooks];
+    string * titles = new string[numBooks];
+    int * quantities = new int[numBooks];
 
-	for (int i = 0; i < numBooks; i++){
-		titles[i] = inventory[i].getTitle();
-		quantities[i] = inventory[i].getQuantity();
-	};
+    for (int i = 0; i < numBooks; i++){
+	titles[i] = inventory[i].getTitle();
+	quantities[i] = inventory[i].getQuantity();
+        
+        totalQuantity += inventory[i].getQuantity();
+    };
 
-	tChart(titles, quantities, numBooks);
+    tChart(titles, quantities, numBooks);
+    
+    cout << "Total quantity of books: " << totalQuantity;
 
-	delete[] titles;
-	delete[] quantities;
+    delete[] titles;
+    delete[] quantities;
 }
 
 void Report::listByCost(){
