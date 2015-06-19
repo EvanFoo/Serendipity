@@ -1,0 +1,209 @@
+26
+394588
+Jurassic Park
+Crichton
+Knopf
+1434668854
+24
+25
+350
+515090506
+The Cat Who Played Brahms
+Lilian Jackson Braun
+E. P. Dutton
+1433100430
+3
+7
+950
+515093203
+The Cat Who Played Post Office
+Lilian Jackson Braun
+E. P. Dutton
+1433100430
+3
+7
+1200
+515144088
+The Cat Who Could Read Backwards
+Lilian Jackson Braun
+E. P. Dutton
+1433100430
+3
+7
+1275
+231116
+The Cat Who Turned On and Off
+Lilian Jackson Braun
+E. P. Dutton
+1433100430
+3
+7
+1337
+515087122
+The Cat Who Ate Danish Modern
+Lilian Jackson Braun
+E. P. Dutton
+1433100430
+3
+7
+1690
+515095826
+The Cat Who Knew Shakespeare
+Lilian Jackson Braun
+E. P. Dutton
+1433100430
+3
+7
+2100
+978110
+The Cat Who Sniffed Glue
+Lilian Jackson Braun
+E. P. Dutton
+1433100430
+3
+7
+2300
+747542155
+Harry Potter and the Prisoner of Azkaban
+J.K. Rowling
+Scholastic
+1433100430
+15
+25
+1196
+9781423
+Artemis Fowl: The Time Paradox
+Eoin Colfer
+Puffin Books
+1433100430
+15
+25
+299
+525478817
+The Fault in Our Stars
+John Green
+Dutton Books
+1433100430
+15
+25
+1500
+747538492
+Harry Potter and the Chamber of Secrets
+J.K. Rowling
+Scholastic
+1433100430
+15
+25
+1500
+123161610
+Artemis Fowl: The Last Guardian
+Eoin Colfer
+Viking Press
+1433100430
+15
+25
+1550
+141321318
+Artemis Fowl: The Eternity Code
+Eoin Colfer
+Viking Press
+1433100430
+15
+25
+1550
+9780439
+Artemis Fowl: The Arctic Incedent
+Eoin Colfer
+Hyperion Books
+1433100430
+15
+25
+1600
+9781423
+Artemis Fowl: The Atlantic Complex
+Eoin Colfer
+Miramax Books
+1433100430
+15
+25
+1599
+141382686
+Artemis Fowl: The Lost Colony
+Eoin Colfer
+Puffin Books
+1433100430
+15
+25
+950
+395177111
+The Hobbit
+J. R. R. Tolkien
+George Allen & Unwin
+1433100430
+15
+25
+1700
+747581088
+Harry Potter and the Half Blood Prince
+J.K. Rowling
+Scholastic
+1433100430
+15
+25
+1700
+545010225
+Harry Potter and the Deathly Hallows
+J.K. Rowling
+Scholastic
+1433100430
+15
+25
+1700
+141381647
+Artemis Fowl: The Opal Deception
+Eoin Colfer
+Puffin Books
+1433100430
+15
+25
+1725
+74754624
+Harry Potter and the Goblet of Fire
+J.K. Rowling
+Scholastic
+1433100430
+15
+25
+2000
+670899623
+Artemis Fowl
+Eoin Colfer
+Viking Press
+1433100430
+15
+25
+1000
+747532699
+Harry Potter and the Philosopher's Stone
+J.K. Rowling
+Scholastic
+1433100430
+15
+25
+1000
+156858
+Steal This Book
+Abbie Hoffman
+Da Capo Press
+1434638223
+12.62
+61.67
+100
+394588
+Jurassic Park
+Micheal Crichton
+Alfred Knopf
+1434639072
+14.99
+24.99
+399
